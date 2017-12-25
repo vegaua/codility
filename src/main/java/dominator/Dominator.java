@@ -35,6 +35,10 @@ public class Dominator {
     }
 
     private void newMethod() {
+        // some body
+    }
+
+    private void oneMoreMethod() {
 
     }
 }
