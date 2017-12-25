@@ -34,4 +34,7 @@ public class Dominator {
         return 0;
     }
 
+    private void newMethod() {
+
+    }
 }
