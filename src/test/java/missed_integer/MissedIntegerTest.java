@@ -1,8 +1,9 @@
 package missed_integer;
 
+import org.junit.jupiter.api.Test;
+
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
-import org.junit.jupiter.api.Test;
 
 public class MissedIntegerTest {
 
@@ -28,5 +29,10 @@ public class MissedIntegerTest {
     public void shouldReturnFour() {
         int [] array = {1,2,3};
         assertThat(new MissedInteger().solution(array), is(4));
+    }
+
+    @Test
+    public void test() {
+        System.out.println("4".matches("-?\\d+(\\.\\d+)?"));
     }
 }
