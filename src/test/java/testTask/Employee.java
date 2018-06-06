@@ -77,7 +77,8 @@ public final class Employee {
     * */
     @Override
     public int hashCode() {
-        return 31 * this.getName().hashCode() + this.getPid();
+        return 1;
+        //        return 31 * this.getName().hashCode() + this.getPid();
     }
 
 }

@@ -32,8 +32,23 @@ public class TelephoneNumberFormatTest {
     }
 
     @Test
-    public void testN1 () {
-        Assert.assertThat(ct2.solution("1234567890123456789012"), Is.is("123-456-78"));
+    public void testWithFourDigits () {
+        Assert.assertThat(ct2.solutionRefactored("1234"), Is.is("12-34"));
+    }
+
+    @Test
+    public void testWithThreeDigits () {
+        Assert.assertThat(ct2.solutionRefactored("123"), Is.is("123"));
+    }
+
+    @Test
+    public void testWithTwoDigits () {
+        Assert.assertThat(ct2.solutionRefactored("12"), Is.is("12"));
+    }
+
+    @Test
+    public void testWithFiveDigits () {
+        Assert.assertThat(ct2.solutionRefactored("12345"), Is.is("123-45"));
     }
 
     @Test
@@ -47,6 +62,7 @@ public class TelephoneNumberFormatTest {
         Assert.assertThat(ct2.getTelephoneNumberGroups("12345678", 1, 2,6),
                 Is.is(Arrays.asList("78")));
     }
+
 
 
 }

@@ -26,8 +26,12 @@ public class TelephoneNumberFormat {
                     defaultGroupSize, 0));
         } else {
             int numberOfGroupsWithDefaultSize = listOfInputDigits.size() / defaultGroupSize;
-            while ((listOfInputDigits.size() % numberOfGroupsWithDefaultSize) % spareGroupSize != 0) {
-                numberOfGroupsWithDefaultSize--;
+            if (numberOfGroupsWithDefaultSize != 0) {
+                while (listOfInputDigits.size() - defaultGroupSize * numberOfGroupsWithDefaultSize < spareGroupSize ||
+                        (listOfInputDigits.size() % numberOfGroupsWithDefaultSize) % spareGroupSize != 0) {
+                    numberOfGroupsWithDefaultSize--;
+                    if (numberOfGroupsWithDefaultSize == 0 ) break;
+                }
             }
             telephoneGroups.addAll(getTelephoneNumberGroups(inputDigits, numberOfGroupsWithDefaultSize,
                     defaultGroupSize, 0));
@@ -47,8 +51,6 @@ public class TelephoneNumberFormat {
         }
         return groups;
     }
-
-
 
 
     public String solution(String S) {
