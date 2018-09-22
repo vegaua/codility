@@ -1,4 +1,4 @@
-package flixBus;
+package fb;
 
 import java.util.*;
 

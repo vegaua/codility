@@ -1,16 +1,16 @@
-package flixBus;
+package fb;
 
 public class Task1 {
 
-    static String isPangram(String[] strings) {
-        String pangrams = "";
-        for(String line: strings) {
-            pangrams += isPangram(line) ? 1 : 0;
-        }
-        return pangrams;
-    }
+//    static String isPangram(String[] strings) {
+//        String pangrams = "";
+//        for(String line: strings) {
+//            pangrams += isPangram(line) ? 1 : 0;
+//        }
+//        return pangrams;
+//    }
 
-    static boolean isPangram(String line) {
+    public boolean isPangram(String line) {
         if(line.length() < 26) return false;
         char[] alphabet = "abcdefghijklmnopqrstuvwxyz".toCharArray();
         for(char letter : alphabet) {

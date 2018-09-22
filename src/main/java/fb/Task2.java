@@ -1,4 +1,4 @@
-package flixBus;
+package fb;
 
 public class Task2 {
 

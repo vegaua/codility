@@ -1,4 +1,4 @@
-package flixBus;
+package fb;
 
 import org.hamcrest.core.Is;
 import org.junit.Assert;
